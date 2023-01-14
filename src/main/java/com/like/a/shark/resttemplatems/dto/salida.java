@@ -1,6 +1,6 @@
 package com.like.a.shark.resttemplatems.dto;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+
 
 public class salida {
 	    private String name;
@@ -8,9 +8,8 @@ public class salida {
 	    private String type;
 	    private String service;
 	    private String serviceUrl;
-		public salida(String name2, String trackName2, String type2, String service2, String serviceUrl2) {
-			// TODO Auto-generated constructor stub
-		}
+	    
+		
 		public String getName() {
 			return name;
 		}
@@ -39,6 +38,14 @@ public class salida {
 			return serviceUrl;
 		}
 		public void setServiceUrl(String serviceUrl) {
+			this.serviceUrl = serviceUrl;
+		}
+		public salida(String name, String trackName, String type, String service, String serviceUrl) {
+			super();
+			this.name = name;
+			this.trackName = trackName;
+			this.type = type;
+			this.service = service;
 			this.serviceUrl = serviceUrl;
 		}
 	      

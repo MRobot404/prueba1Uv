@@ -4,16 +4,16 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class UserIOs {
-	@JsonProperty("artistName")
+public class Usertvmaze {
+	@JsonProperty("name")
     private String name;
     @JsonProperty("trackName")
     private String trackName;
-    @JsonProperty("wrapperType")
+    @JsonProperty("type")
     private String type;
     @JsonProperty("service")
     private String service;
-    @JsonProperty("artistViewUrl")
+    @JsonProperty("url")
     private String serviceUrl;
 	public String getName() {
 		return name;
@@ -45,10 +45,14 @@ public class UserIOs {
 	public void setServiceUrl(String serviceUrl) {
 		this.serviceUrl = serviceUrl;
 	}
-	public UserIOs() {
+	
+	
+	
+	public Usertvmaze() {
+		super();
 		// TODO Auto-generated constructor stub
 	}
-	public UserIOs(String name, String trackName, String type, String service, String serviceUrl) {
+	public Usertvmaze(String name, String trackName, String type, String service, String serviceUrl) {
 		super();
 		this.name = name;
 		this.trackName = trackName;
@@ -57,7 +61,5 @@ public class UserIOs {
 		this.serviceUrl = serviceUrl;
 	}
 	
-	
-    
     
 }
