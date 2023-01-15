@@ -15,6 +15,8 @@ public class Usertvmaze {
     private String service;
     @JsonProperty("url")
     private String serviceUrl;
+    
+    
 	public String getName() {
 		return name;
 	}
@@ -34,10 +36,10 @@ public class Usertvmaze {
 		this.type = type;
 	}
 	public String getService() {
-		return service;
+		return service="Tv maze";
 	}
 	public void setService(String service) {
-		this.service = service;
+		this.service = "Tv Maze";
 	}
 	public String getServiceUrl() {
 		return serviceUrl;
@@ -49,8 +51,7 @@ public class Usertvmaze {
 	
 	
 	public Usertvmaze() {
-		super();
-		// TODO Auto-generated constructor stub
+				// TODO Auto-generated constructor stub
 	}
 	public Usertvmaze(String name, String trackName, String type, String service, String serviceUrl) {
 		super();

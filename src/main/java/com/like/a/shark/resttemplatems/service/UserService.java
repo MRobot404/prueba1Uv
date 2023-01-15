@@ -50,6 +50,18 @@ public class UserService {
 		}
         
         String response2 = restTemplate.getForObject(basePath2+name, String.class);
+        ObjectMapper mapper2=new ObjectMapper();
+        UserDTO2[] resultado3=mapper2.readValue(response2, UserDTO2[].class);
+        List<UserDTO2> tempB = Arrays.asList(resultado3);
+        for (int i=0;i<tempB.size();i++) {
+            Usertvmaze temporal2= tempB.get(i).getPerson();
+            
+            if(temporal2.getName().toLowerCase().equals(name.toLowerCase())) {
+            	salida nuevo=new salida(temporal2.getName(),temporal2.getTrackName(),temporal2.getType(),temporal2.getService(),temporal2.getServiceUrl());
+            	resultado2.add(nuevo);
+            }
+    		}
+       
         
       
         
@@ -59,16 +71,11 @@ public class UserService {
      
     }
     public List<UserDTO2> getUserss (@PathVariable("name") String name) throws JsonMappingException, JsonProcessingException{
-    	ObjectMapper mapper=new ObjectMapper();
-    	String contenido = restTemplate.getForObject(basePath2+name, String.class);
-    	UserDTO2[] result2 = mapper.readValue(contenido, UserDTO2[].class);        
-    	List<UserDTO2> tempB = Arrays.asList(result2);
-        
-       
-        
-        return tempB;
-        
-     
+    	String response = restTemplate.getForObject(basePath2+name, String.class);
+        ObjectMapper mapper=new ObjectMapper();
+        UserDTO2[] resultado=mapper.readValue(response, UserDTO2[].class);
+        List<UserDTO2> tempB = Arrays.asList(resultado);
+		return tempB;
     }
     
     

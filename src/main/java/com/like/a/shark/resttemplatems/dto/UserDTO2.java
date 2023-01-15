@@ -1,27 +1,31 @@
 package com.like.a.shark.resttemplatems.dto;
 
-
+import java.util.ArrayList;
+import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-@JsonIgnoreProperties(ignoreUnknown =true)
 public class UserDTO2 {
-	@JsonProperty("score")
-   private int score;
-   private Object Usertvmaze;
+
+	private int score;
+	
+	private  Usertvmaze person;
+
+
 public int getScore() {
 	return score;
 }
 public void setScore(int score) {
 	this.score = score;
 }
-public Object getUsertvmaze() {
-	return Usertvmaze;
+public Usertvmaze getPerson() {
+	return person;
 }
-public void setUsertvmaze(Object usertvmaze) {
-	Usertvmaze = usertvmaze;
+public void setPerson(Usertvmaze person) {
+	this.person = person;
 }
+
 
 
    

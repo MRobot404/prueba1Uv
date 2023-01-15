@@ -12,4 +12,9 @@ public class RestTemplateConfig {
     public RestTemplate restTemplate(RestTemplateBuilder builder){
         return builder.build();
     }
+    
+    @Bean
+    public RestTemplate restTemplate2(RestTemplateBuilder builder){
+        return builder.build();
+    }
 }
